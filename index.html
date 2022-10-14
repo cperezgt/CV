@@ -38,7 +38,7 @@
 
 </head>
 
-<body>
+<body oncontextmenu='return false' class='snippet-body'>
 
 
   <!-- ======= Mobile nav toggle button ======= -->
@@ -559,7 +559,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="https://formsubmit.co/a892a87301641fbc8685c0a148951fe8" method="POST"  id="regForm" role="form" class="email-form needs-validation" novalidate>
+            <form action="https://formsubmit.co/a892a87301641fbc8685c0a148951fe8" method="POST" autocomplete="off" id="regForm" role="form" class="email-form needs-validation" novalidate>
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre" required onkeyup="mayus(this);" style="text-transform:uppercase">
@@ -676,6 +676,8 @@ let obtener_datos = () => {
             document.getElementById("regForm").submit();
 
             return true;
+          
+           limpiar();
 
         });
     
